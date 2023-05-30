@@ -1,0 +1,30 @@
+body{
+    background-color: aquamarine;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a{
+    font-size: large;
+    color: black;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(65, 65, 186);
+    border-bottom: 3px solid rgb(65, 65, 186);
+}
+
+div#imagen{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
