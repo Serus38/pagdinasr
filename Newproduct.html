@@ -22,8 +22,8 @@
             height="100">
         </div>
         <h2>Ingresar nuevo producto </h2>
-        <hr>
-        <form action="" class="formulario" id="formulario">
+		
+        <form class="formulario" id="formulario">
 
 			<div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Nombre</label>
@@ -36,7 +36,7 @@
 
 			
 			<div class="formulario__grupo" id="grupo__inventario">
-				<label for="password" class="formulario__label">Inventario</label>
+				<label for="inventario" class="formulario__label">Inventario</label>
 				<div class="formulario__grupo-input">
 					<input type="number" class="formulario__input" name="inventario" id="inventario">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -45,7 +45,7 @@
 			</div>
 
             <div class="formulario__grupo" id="grupo__precio">
-				<label for="password" class="formulario__label">Precio</label>
+				<label for="precio" class="formulario__label">Precio</label>
 				<div class="formulario__grupo-input">
 					<input type="number" class="formulario__input" name="precio" id="precio">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -58,7 +58,7 @@
 				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
 			</div>
 
-			<div class="formulario__grupo formulario__grupo-btn-enviar">
+			<div class="formulario__grupo" id="formulario__grupo-btn-enviar">
 				<button type="submit" class="formulario__btn">Enviar</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>

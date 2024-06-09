@@ -1,5 +1,6 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+const submit = document.querySelectorAll('submit');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
@@ -28,8 +29,8 @@ const validarFormulario = (e) => {
 	}
 }
 
-const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)){
+const validarCampo = (expresiones, input, campo) => {
+	if(expresiones.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
@@ -53,7 +54,7 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-
+	
 	const campos = document.getElementById('campo');
 	if(campos.nombre && campos.inventario && campos.precio ){
 		formulario.reset();
