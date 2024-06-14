@@ -55,8 +55,8 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	
-	const campos = document.getElementById('campo');
-	if(campos.nombre && campos.inventario && campos.precio ){
+	const campo = document.getElementById('campo');
+	if(campos.nombre && campos.inventario && campos.precio){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');

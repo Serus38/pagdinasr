@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Car</title>
+    </head>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="car.js"></script>
+    <body>
+        <nav class="menu">
+            <div>
+                <div class="logo">
+                    <img src="Imagenes/dotSTORE.png"
+                    width="150"
+                    height="100">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="car.html">Car</a></li>
+                    <li><a href=#>Products</a></li>
+                    <li><a href="Newproduct.html">New Product</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>My Car</h1>
+        <table id="productos">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="productos-tbody">
+            </tbody>
+        </table>
+
+        <script>
+            const productosTbody = document.getElementById("productos-tbody");
+
+            for (let i = 0; i < productos.length; i++) {
+                const producto = productos [i];
+                const row = productosTbody.insertRow();
+                const imagenCell = row.insertCell();
+                const nameCell = row.insertCell();
+                const priceCell = row.insertCell();
+                const quantityCell = row.insertCell();
+                const totalCell = row.insertCell();
+
+                imagenCell.innerHTML = `<img src="${producto.image}" alt="${producto.name}">`;
+                nameCell.textContent = producto.name;
+                priceCell.textContent = producto.price;
+                quantityCell.textContent = producto.quantity;
+                totalCell.textContent = producto.price * producto.quantity;
+            }
+        </script>
+        
+    </body>
+</html>
